@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-
-        {% block javascripts %}{% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('appcss') }}
+        {% endblock %}
     </head>
     <body>
+
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="flex items-center justify-center" role="alert">
+                    <p class="flex items-center text-sm flash-{{ label }} font-light px-4 py-3 rounded">
+                        <span class="ml-2">{{ message }}</span>
+                    </p>
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <span class="my-4"></span>
+
         {% block body %}{% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>
