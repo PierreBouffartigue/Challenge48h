@@ -22,6 +22,7 @@
     "dependencies": {
         "@tailwindcss/postcss7-compat": "^2.0.3",
         "autoprefixer": "^9.8.6",
+        "maildev": "^1.1.0",
         "postcss": "^7.0.35"
     }
 }
