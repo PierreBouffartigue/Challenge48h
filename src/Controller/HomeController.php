@@ -8,7 +8,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @IsGranted("IS_AUTHENTIFICATED_FULLY")
+ * Class HomeController
+ * @package App\Controller
+ * @IsGranted("IS_AUTHENTICATED_FULLY")
  */
 class HomeController extends AbstractController
 {

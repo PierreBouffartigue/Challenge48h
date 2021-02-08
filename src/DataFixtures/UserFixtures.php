@@ -22,7 +22,7 @@ class UserFixtures extends Fixture
         $user->setIsVerified(true);
         $user->setEmail('admin@mon-tresorier.com');
         $user->setPassword($this->userPasswordEncoder->encodePassword($user, '1234'));
-        $user->setRoles(['ROLE_ADMIN', 'ROLE_USER']);
+        $user->setRoles(['ROLE_ADMIN']);
 
         $manager->persist($user);
         $manager->flush();
