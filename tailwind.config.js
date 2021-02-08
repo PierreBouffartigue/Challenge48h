@@ -17,6 +17,7 @@ module.exports = {
       orange: colors.orange,
       green: colors.emerald,
       teal: colors.teal,
+      cyan: colors.cyan,
       blue: colors.blue,
       violet: colors.violet,
       rose: colors.rose
@@ -25,5 +26,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio')
+  ],
 }
